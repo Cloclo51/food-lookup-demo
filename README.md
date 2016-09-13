@@ -116,7 +116,9 @@ So how did I even get to this cloned repository in the first place? Here are the
    git commit -a -m "."
    git push heroku master
    ```
+
 8. Now it looks like I have to turn on the dyno for the second "api" defined in the Procfile, so I go to the dashboard and do that:
+
    a. Navigate to https://dashboard.heroku.com/apps/food-lookup-demo-135
 
    b. See how "api" is turned off -- click "Configure dynos"
