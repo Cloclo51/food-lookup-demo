@@ -136,11 +136,14 @@ heroku ps
 ```
 
 I see:
+
+```
 === web (Free): cd client && npm start (1)
 web.1: up 2016/09/13 11:14:03 -0700 (~ 3m ago)
 
 === api (Free): npm run server (1)
 api.1: up 2016/09/13 11:16:01 -0700 (~ 1m ago)
+```
 
 
 So it looks like I have two processes running, one for the web client and one for the server.
