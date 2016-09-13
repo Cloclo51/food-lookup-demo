@@ -1,5 +1,5 @@
-# Bug
-**NOTE:** This fork isn't doing anything interesting; it is only being used as a reference in a bug.
+# About
+**NOTE:** This fork isn't doing anything interesting; it is only being used as a reference in an issue.
 
 
 ## "Simple" repro steps
