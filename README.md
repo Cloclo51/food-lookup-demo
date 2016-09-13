@@ -118,8 +118,11 @@ So how did I even get to this cloned repository in the first place? Here are the
    ```
 8. Now it looks like I have to turn on the dyno for the second "api" defined in the Procfile, so I go to the dashboard and do that:
    a. Navigate to https://dashboard.heroku.com/apps/food-lookup-demo-135
+
    b. See how "api" is turned off -- click "Configure dynos"
+   
    c. Click the pencil icon and turn on the "api" dyno (I also had to edit credit card info, though nothing charged)
+   
 9. OK, now I go back to the terminal and I run:
    ```
    heroku ps
