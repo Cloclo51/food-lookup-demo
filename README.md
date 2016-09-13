@@ -113,7 +113,6 @@ So how did I even get to this cloned repository in the first place? Here are the
    And I also had to make react-scripts a real dependency in the client, i.e. not just a dev dependency:
    
    ```
-   client/package.json:
        "dependencies": {
          "react": "^15.2.1",
          "react-dom": "^15.2.1",
