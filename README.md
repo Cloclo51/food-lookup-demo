@@ -66,15 +66,19 @@ So how did I even get to this cloned repository in the first place? Here are the
    cd ..
    npm start
    ```
+   
 2. Navigate to http://localhost:3000/ and type in something like "bread"
 3. Go back to the terminal and ctrl-C to kill the server
 4. Execute the following commands from "Heroku Buildpack for Create React App" (https://github.com/mars/create-react-app-buildpack)
+
    ```
    heroku create food-lookup-demo-135 --buildpack https://github.com/mars/create-react-app-buildpack.git
    
    git push heroku master
    ```
+   
    This results in the following error:
+
    ```
    "remote: npm ERR! Linux 3.13.0-93-generic
    remote: npm ERR! argv "/tmp/build_79e8066fd9274c044b2c2d5355344d08/.heroku/node/bin/node" "/tmp/build_79e8066fd9274c044b2c2d5355344d08/.heroku/node/bin/npm" "run" "build"
@@ -85,9 +89,11 @@ So how did I even get to this cloned repository in the first place? Here are the
    remote: npm ERR!"
    ```
 5. I don't really understand what's going wrong with the buildpack so I'm going to delete the buildpack:
+
    ```
    heroku buildpacks:clear
    ```
+
 6. At this point if you run `git push heroku master,` you'll get an error for the web client (defined in the Procfile as "web") saying `"sh: 1: react-scripts: not found"` and `"Local package.json exists, but node_modules missing, did you mean to install?"`
 
    So I had to add `"install": "cd client && npm i && cd .."` to the scripts section of the server's `/package.json`, like
@@ -112,6 +118,7 @@ So how did I even get to this cloned repository in the first place? Here are the
    ```
    
 7. Redeploy with the modifications made in step 6:
+
    ```
    git commit -a -m "."
    git push heroku master
@@ -126,6 +133,7 @@ So how did I even get to this cloned repository in the first place? Here are the
    c. Click the pencil icon and turn on the "api" dyno (I also had to edit credit card info, though nothing charged)
    
 9. OK, now I go back to the terminal and I run:
+
    ```
    heroku ps
    ```
