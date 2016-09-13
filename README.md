@@ -29,7 +29,7 @@ To repro my issue:
 
    `heroku ps`
 
-which shows:
+    which shows:
    
    ```
    Free dyno hours quota remaining this month: 938h 12m (93%)
