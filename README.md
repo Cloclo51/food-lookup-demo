@@ -20,9 +20,13 @@ To repro my issue:
 3. Enable the "api" dyno
    
    a. Navigate to https://dashboard.heroku.com
+
    b. Click on your newly created app -- see that in the "Dyno formation" table, "api" (the server process defined in the Procfile) is turned off
+   
    c. Click "Configure dynos"
+   
    d. In the "api" row, click the pencil icon on the right
+   
    e. Toggle the "api" dyno on and press "Confirm"
 
 4. Verify the "api" dyno is now an active process by going back to the terminal and running the following command:
