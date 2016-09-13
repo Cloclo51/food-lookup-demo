@@ -1,5 +1,5 @@
 # About
-**NOTE:** This fork isn't doing anything interesting; it is only being used as a reference in an issue.
+**NOTE:** This fork isn't doing anything interesting; it is only being used as a reference in [an issue](https://github.com/facebookincubator/create-react-app/issues/639).
 
 
 ## "Simple" repro steps
