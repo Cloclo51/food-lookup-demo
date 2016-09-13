@@ -89,7 +89,9 @@ So how did I even get to this cloned repository in the first place? Here are the
    heroku buildpacks:clear
    ```
 6. At this point if you run `git push heroku master,` you'll get an error for the web client (defined in the Procfile as "web") saying `"sh: 1: react-scripts: not found"` and `"Local package.json exists, but node_modules missing, did you mean to install?"`
+
    So I had to add `"install": "cd client && npm i && cd .."` to the scripts section of the server's `/package.json`, like
+   
    ```
       "scripts": {
         "install": "cd client && npm i && cd ..",
@@ -97,7 +99,9 @@ So how did I even get to this cloned repository in the first place? Here are the
         "server": "API_PORT=3001 ./node_modules/.bin/babel-node server.js"
       }
    ```
+   
    And I also had to make react-scripts a real dependency in the client, i.e. not just a dev dependency:
+   
    ```
    client/package.json:
        "dependencies": {
@@ -106,6 +110,7 @@ So how did I even get to this cloned repository in the first place? Here are the
          "react-scripts": "0.2.3"
       },
    ```
+   
 7. Redeploy with the modifications made in step 6:
    ```
    git commit -a -m "."
